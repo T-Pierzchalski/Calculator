@@ -116,3 +116,12 @@ body {
 		transition: color 1s;
 	}
 }
+
+@media screen and (max-width: 576px) {
+	#top-bar {
+		width: 95%;
+	}
+	.row {
+		width: 90%;
+	}
+}
