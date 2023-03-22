@@ -29,7 +29,7 @@ body {
 	display: flex;
 	justify-content: center;
 	margin-inline: auto;
-	width: 70%;
+	width: 60%;
 	padding-inline: 1em;
 	background-color: #000;
 	border: 5px solid #315008;
@@ -74,10 +74,13 @@ body {
 	align-content: center;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 25px;
+	gap: 15px;
+	padding: 10px;
+	padding-top: 0;
+	padding-bottom: none;
 	margin-inline: auto;
-	min-height: 50%;
-	width: 70%;
+	min-height: 45%;
+	width: 60%;
 	border: 10px solid #315008;
 	border-top: 5px solid #315008;
 	border-radius: 10px;
