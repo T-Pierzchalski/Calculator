@@ -99,6 +99,14 @@ body {
 		font-family: "Roboto";
 		font-weight: 700;
 	}
+	button:focus {
+		transform: scale(1.2);
+		transition: transform 1s;
+	}
+	button:active {
+		transform: scale(1.5);
+		transition: transform 1s;
+	}
 	button.functional {
 		background-color: #f2ff00;
 		color: black;

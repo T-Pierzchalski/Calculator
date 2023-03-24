@@ -1,4 +1,5 @@
 const screen = document.querySelector(".screen");
+const calcNumVariables = { a: "", b: "" };
 
 // Buttons
 const buttonsNum = document.querySelectorAll("button");
@@ -12,14 +13,9 @@ buttonsFunctional.forEach(button => {
 	button.addEventListener("click", a => {
 		screen.value;
 		a = screen.value.slice(0, screen.value.length - 1);
-		screen.removeAttribute("placeholder");
+		calcNumVariables.a = a;
 		screen.value = "";
-		console.log(a);
-	});
-	button.addEventListener("click", b => {
-		screen.value;
-		b = screen.value.slice(0, screen.value.length - 1);
-		console.log(b);
+		button.removeEventListener("click", this);
 	});
 });
 const equalButton = document.querySelector(".equal-button");
@@ -56,8 +52,11 @@ function exponentiation(a, b) {
 // Calculator
 function operate() {}
 
-equalButton.addEventListener("click", () => {
-	operate();
+equalButton.addEventListener("click", b => {
+	screen.value;
+	b = screen.value.slice(0, screen.value.length - 1);
+	calcNumVariables.b = b;
+	screen.value = "";
 });
 
 // function isEqual() {}
