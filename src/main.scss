@@ -6,7 +6,15 @@
 }
 
 body {
-	background-color: black;
+	background-image: url(https://cdn.pixabay.com/photo/2016/06/13/09/57/meeting-1453895_960_720.png),
+		url(https://cdn.pixabay.com/photo/2012/05/07/01/54/owl-47526_960_720.png),
+		url(https://cdn.pixabay.com/photo/2014/04/03/10/29/hexagons-310659_960_720.png);
+	background-repeat: no-repeat;
+	background-position: 100% -200%, 50% 6%, bottom;
+	background-size: auto, 5%, cover;
+	h1 {
+		color: black;
+	}
 }
 #container {
 	header {
@@ -53,7 +61,7 @@ body {
 		border: none;
 	}
 	.clear-button {
-		font-size: 1.2em;
+		font-size: 1em;
 		margin-left: 5%;
 		width: 12%;
 		background-color: #5ce1e6;
@@ -61,7 +69,8 @@ body {
 		border-radius: 10px;
 		font-family: "Roboto", sans-serif;
 		font-weight: 700;
-		height: auto;
+		height: 70%;
+		margin-top: 5px;
 	}
 	.clear-button:hover {
 		cursor: pointer;
@@ -75,9 +84,9 @@ body {
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 15px;
-	padding: 10px;
+	padding: 9px;
 	padding-top: 0;
-	padding-bottom: none;
+	padding-bottom: 0;
 	margin-inline: auto;
 	min-height: 45%;
 	width: 60%;
@@ -89,7 +98,7 @@ body {
 	background-color: #545454;
 
 	button {
-		width: 12%;
+		width: 15%;
 		height: 15%;
 		font-size: 1.25em;
 		background-color: #c1ff72;
@@ -98,6 +107,7 @@ body {
 		border-radius: 10px;
 		font-family: "Roboto";
 		font-weight: 700;
+		box-shadow: 3px 3px #000;
 	}
 	button:focus {
 		transform: scale(1.2);
@@ -112,22 +122,36 @@ body {
 		color: black;
 		font-weight: 700;
 	}
-	button.advanced-functional {
+	button.advanced {
 		background-color: #ffde59;
 		color: black;
 		font-weight: 700;
 	}
-	button:hover,
-	.functional:hover,
-	.advanced-functional:hover {
+	button:hover {
 		cursor: pointer;
 		filter: brightness(75%);
 		transition: filter 0.5s ease-in-out;
 		color: black;
 		transition: color 1s;
+		font-weight: 700;
+	}
+	.functional:hover,
+	.advanced:hover {
+		color: white;
+		background-color: #000;
+		transition: background-color 1s ease-in-out;
 	}
 	.equal-button {
 		background-color: #315008;
+		width: 35%;
+	}
+	.dot-btn {
+		background-color: black;
+	}
+	.dot-btn:hover {
+		background-color: white;
+		color: black;
+		transition: background-color 1s ease-in-out;
 	}
 }
 
@@ -137,5 +161,48 @@ body {
 	}
 	.row {
 		width: 90%;
+	}
+	body {
+		background-position: 0 300%, 50% 6%, bottom;
+		background-size: 100%, 30%, cover;
+		h1 {
+			margin-top: 100px;
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	body {
+		background-position: 0 550%, 50% 6%, bottom;
+		background-size: 100%, 25%, cover;
+		h1 {
+			margin-top: 100px;
+		}
+	}
+}
+@media screen and (max-width: 992px) {
+	body {
+		background-position: 0 500px, 50% 6%, bottom;
+		background-size: 100%, 25%, cover;
+		h1 {
+			margin-top: 100px;
+		}
+	}
+}
+@media screen and (max-width: 1200px) {
+	body {
+		background-position: 100% 500px, 50% 6%, bottom;
+		background-size: 50%, 10%, cover;
+		h1 {
+			margin-top: 100px;
+		}
+	}
+}
+@media screen and (max-width: 1440px) {
+	body {
+		background-position: 100% 400px, 50% 6%, bottom;
+		background-size: 50%, 10%, cover;
+		h1 {
+			margin-top: 100px;
+		}
 	}
 }

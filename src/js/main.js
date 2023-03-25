@@ -1,6 +1,5 @@
 const screen = document.querySelector(".screen");
 const calcNumVariables = { a: "", b: "" };
-
 // Buttons
 const buttonsNum = document.querySelectorAll("button");
 buttonsNum.forEach(button => {
@@ -26,6 +25,9 @@ const plus = document.querySelector(".plus");
 const subtract = document.querySelector(".subtract");
 const multipler = document.querySelector(".multipler");
 const diviser = document.querySelector(".diviser");
+const percentager = document.querySelector(".percentager");
+const squareRooter = document.querySelector(".squareRooter");
+const exponentiator = document.querySelector(".exponentiator");
 
 // Calculator functions \\
 function addition() {
@@ -45,15 +47,15 @@ function division() {
 }
 
 function percentage(a, b) {
-	return (screen.value = (a / b) * 100 + "%");
+	screen.value = (calcNumVariables.a / calcNumVariables.b) * 100 + "%";
 }
 
 function squareRoot(a) {
-	return (screen.value = Math.sqrt(a));
+	screen.value = Math.sqrt(calcNumVariables.a);
 }
 
 function exponentiation(a, b) {
-	return (screen.value = a ** b);
+	screen.value = calcNumVariables.a ** calcNumVariables.b;
 }
 
 // Calculator
@@ -66,6 +68,14 @@ function operate() {
 		multiplication();
 	} else if (diviser.classList.contains("active")) {
 		division();
+	} else if (percentager.classList.contains("active")) {
+		percentage();
+	} else if (squareRooter.classList.contains("active")) {
+		squareRoot();
+	} else if (exponentiator.classList.contains("active")) {
+		exponentiation();
+	} else {
+		screen.value = "Error";
 	}
 	const active = document.querySelector(".active");
 	active.classList.remove("active");
@@ -88,5 +98,7 @@ clearButton.addEventListener("click", () => {
 	calcNumVariables.a = "";
 	calcNumVariables.b = "";
 	const active = document.querySelector(".active");
-	active.classList.remove("active");
+	if (active) {
+		active.classList.remove("active");
+	}
 });
