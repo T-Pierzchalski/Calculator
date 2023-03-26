@@ -158,6 +158,9 @@ body {
 }
 
 @media screen and (max-width: 576px) {
+	#container {
+		width: 375px;
+	}
 	#top-bar {
 		width: 95%;
 	}
@@ -168,7 +171,7 @@ body {
 		background-position: 0 60vh, 50% 2vh, 50% -8vh;
 		background-size: 100%, 30%, cover;
 		h1 {
-			margin-top: 100px;
+			margin-top: 10vh;
 		}
 	}
 }
@@ -183,7 +186,7 @@ body {
 		background-position: 0 60vh, 50% 2vh, bottom;
 		background-size: 100%, 20vh, cover;
 		h1 {
-			margin-top: 150px;
+			margin-top: 30vh;
 		}
 	}
 }
@@ -191,35 +194,23 @@ body {
 	body {
 		background-position: 0 60vh, 50% 2vh, bottom;
 		background-size: 100%, 20vh, cover;
-		h1 {
-			margin-top: 140px;
-		}
 	}
 }
 @media screen and (min-width: 992px) {
 	body {
 		background-position: 0 60vh, 50% 1vh, bottom;
 		background-size: 100%, 20vh, cover;
-		h1 {
-			margin-top: 150px;
-		}
 	}
 }
 @media screen and (min-width: 1200px) {
 	body {
 		background-position: 0 60vh, 50% 2vh, bottom;
 		background-size: 50%, 20vh, cover;
-		h1 {
-			margin-top: 150px;
-		}
 	}
 }
 @media screen and (min-width: 1440px) {
 	body {
 		background-position: 100% 400px, 50% 6%, bottom;
-		background-size: 50%, 10%, cover;
-		h1 {
-			margin-top: 160px;
-		}
+		background-size: 50%, 20vh, cover;
 	}
 }
