@@ -7,6 +7,17 @@ buttonsNum.forEach(button => {
 		screen.value += button.textContent;
 	});
 });
+// key listener
+window.addEventListener("keydown", e => {
+	if (
+		(e.keyCode >= 48 && e.keyCode <= 57) ||
+		(e.keyCode >= 96 && e.keyCode <= 105) ||
+		e.keyCode === 190
+	) {
+		screen.value += e.key;
+	}
+});
+
 const buttonsFunctional = document.querySelectorAll(".functional");
 buttonsFunctional.forEach(function (button) {
 	button.addEventListener("click", function (a) {
@@ -89,8 +100,6 @@ equalButton.addEventListener("click", function (b) {
 	operate();
 });
 
-// function isEqual() {}
-
 // Reset calc
 const clearButton = document.querySelector(".clear-button");
 clearButton.addEventListener("click", () => {
@@ -100,5 +109,16 @@ clearButton.addEventListener("click", () => {
 	const active = document.querySelector(".active");
 	if (active) {
 		active.classList.remove("active");
+	}
+});
+window.addEventListener("keydown", e => {
+	if (e.keyCode === 8) {
+		screen.value = "";
+		calcNumVariables.a = "";
+		calcNumVariables.b = "";
+		const active = document.querySelector(".active");
+		if (active) {
+			active.classList.remove("active");
+		}
 	}
 });
