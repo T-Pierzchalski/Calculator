@@ -5,6 +5,7 @@ const buttonsNum = document.querySelectorAll("button");
 buttonsNum.forEach(button => {
 	button.addEventListener("click", () => {
 		screen.value += button.textContent;
+		screen.classList.add("screen-focus");
 	});
 });
 // key listener
@@ -18,6 +19,7 @@ window.addEventListener("keydown", e => {
 	} else if (e.keyCode === 110) {
 		screen.value += ".";
 	}
+	screen.classList.add("screen-focus");
 });
 
 const buttonsFunctional = document.querySelectorAll(".functional");
@@ -51,7 +53,7 @@ window.addEventListener("keydown", function (e, a) {
 		calcNumVariables.a = a;
 		screen.value = "";
 	} else if (e.keyCode === 109) {
-		minus.classList.add("active");
+		subtract.classList.add("active");
 		screen.value;
 		a = screen.value;
 		calcNumVariables.a = a;
@@ -123,6 +125,7 @@ function operate() {
 }
 
 equalButton.addEventListener("click", function (b) {
+	screen.classList.remove("screen-focus");
 	screen.value;
 	b = screen.value.slice(0, screen.value.length - 1);
 	calcNumVariables.b = b;
@@ -131,6 +134,7 @@ equalButton.addEventListener("click", function (b) {
 });
 window.addEventListener("keydown", (e, b) => {
 	if (e.keyCode === 13) {
+		screen.classList.remove("screen-focus");
 		screen.value;
 		b = screen.value;
 		calcNumVariables.b = b;
@@ -141,6 +145,7 @@ window.addEventListener("keydown", (e, b) => {
 // Reset calc
 const clearButton = document.querySelector(".clear-button");
 clearButton.addEventListener("click", () => {
+	screen.classList.remove("screen-focus");
 	screen.value = "";
 	calcNumVariables.a = "";
 	calcNumVariables.b = "";
@@ -151,6 +156,7 @@ clearButton.addEventListener("click", () => {
 });
 window.addEventListener("keydown", e => {
 	if (e.keyCode === 8) {
+		screen.classList.remove("screen-focus");
 		screen.value = "";
 		calcNumVariables.a = "";
 		calcNumVariables.b = "";

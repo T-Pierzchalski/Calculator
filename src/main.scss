@@ -6,12 +6,16 @@
 }
 
 body {
-	background-image: url(https://cdn.pixabay.com/photo/2016/06/13/09/57/meeting-1453895_960_720.png),
+	background-image: radial-gradient(
+			rgba(250, 250, 250, 0.5),
+			rgba(51, 51, 51, 0.5)
+		),
+		url(https://cdn.pixabay.com/photo/2016/06/13/09/57/meeting-1453895_960_720.png),
 		url(https://cdn.pixabay.com/photo/2012/05/07/01/54/owl-47526_960_720.png),
 		url(https://cdn.pixabay.com/photo/2014/04/03/10/29/hexagons-310659_960_720.png);
 	background-repeat: no-repeat;
-	background-position: 100% -200%, 50% 6%, bottom;
-	background-size: auto, 5%, cover;
+	background-position: bottom, 100% -200%, 50% 6%, bottom;
+	background-size: cover, auto, 5%, cover;
 	font-family: Roboto;
 	font-weight: 700;
 	h1 {
@@ -19,6 +23,7 @@ body {
 		text-shadow: 3px 3px black;
 		font-size: 5em;
 	}
+	min-height: 76vh;
 }
 #container {
 	header {
@@ -30,8 +35,8 @@ body {
 	margin-top: 3em;
 	width: 508px;
 	height: 508px;
-	display: flex;
-	flex-direction: column;
+	margin-inline: auto;
+	text-align: center;
 	font-size: 16px;
 	font-weight: 700;
 	border-radius: 10px;
@@ -49,12 +54,13 @@ body {
 	padding: 0.25em 0.25em;
 	.screen {
 		width: 80%;
-		min-height: 1.5em;
+		min-height: 2.5em;
 		padding: 0.25em 0.5em 0.25em 0.5em;
 		background-color: #e1feff;
 		border: 3px solid #315008;
 		border-radius: 10px;
 		font-size: 20px;
+		text-align: right;
 	}
 	.screen::before {
 		font-weight: 300;
@@ -64,10 +70,15 @@ body {
 		font-weight: bold;
 		border: none;
 	}
+	.screen-focus {
+		background-color: #000;
+		color: #fff;
+	}
 	.clear-button {
 		font-size: 1em;
 		margin-left: 5%;
 		width: 12%;
+		min-height: 2.5em;
 		background-color: #5ce1e6;
 		border: 1px solid white;
 		border-radius: 10px;
@@ -87,13 +98,12 @@ body {
 	align-content: center;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 15px;
-	padding: 9px;
-	padding-top: 0;
-	padding-bottom: 0;
+	gap: 11px;
+	padding-inline: 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	margin-inline: auto;
-	min-height: 45%;
-	width: 60%;
+	min-height: 50%;
 	border: 10px solid #315008;
 	border-top: 5px solid #315008;
 	border-radius: 10px;
@@ -102,8 +112,8 @@ body {
 	background-color: #545454;
 
 	button {
-		width: 15%;
-		height: 15%;
+		width: 18%;
+		height: 18%;
 		font-size: 1.5em;
 		background-color: #c1ff72;
 		border: 3px solid #000;
@@ -127,11 +137,13 @@ body {
 		color: black;
 		text-shadow: 1px 1px #fff;
 		font-weight: 700;
+		margin-top: 2px;
 	}
 	button.advanced {
 		background-color: #ffde59;
 		color: black;
 		font-weight: 700;
+		margin-top: 2px;
 	}
 	button:hover {
 		cursor: pointer;
@@ -149,7 +161,7 @@ body {
 	}
 	.equal-button {
 		background-color: #315008;
-		width: 35%;
+		width: 38%;
 	}
 	.dot-btn {
 		background-color: black;
@@ -172,10 +184,10 @@ body {
 		width: 90%;
 	}
 	body {
-		background-position: 0 60vh, 50% 2vh, 50% -8vh;
-		background-size: 100%, 30%, cover;
+		background-position: bottom, 0 60vh, 50% 2vh, 50% -8vh;
+		background-size: cover, 100%, 30%, cover;
 		h1 {
-			margin-top: 10vh;
+			margin-top: 2vh;
 		}
 	}
 }
@@ -187,34 +199,34 @@ body {
 		width: 90%;
 	}
 	body {
-		background-position: 0 60vh, 50% 2vh, bottom;
-		background-size: 100%, 20vh, cover;
+		background-position: bottom, 0 60vh, 50% 2vh, bottom;
+		background-size: cover, 100%, 20vh, cover;
 		h1 {
-			margin-top: 30vh;
+			margin-top: 24vh;
 		}
 	}
 }
 @media screen and (min-width: 768px) {
 	body {
-		background-position: 0 60vh, 50% 2vh, bottom;
-		background-size: 100%, 20vh, cover;
+		background-position: 0, 0 60vh, 50% 2vh, bottom;
+		background-size: cover, 100%, 20vh, cover;
 	}
 }
 @media screen and (min-width: 992px) {
 	body {
-		background-position: 0 60vh, 50% 1vh, bottom;
-		background-size: 100%, 20vh, cover;
+		background-position: bottom, 0 60vh, 50% 1vh, bottom;
+		background-size: cover, 100%, 20vh, cover;
 	}
 }
 @media screen and (min-width: 1200px) {
 	body {
-		background-position: 0 60vh, 50% 2vh, bottom;
-		background-size: 50%, 20vh, cover;
+		background-position: bottom, 0 60vh, 50% 2vh, bottom;
+		background-size: cover, 50%, 20vh, cover;
 	}
 }
 @media screen and (min-width: 1440px) {
 	body {
-		background-position: 100% 400px, 50% 6%, bottom;
-		background-size: 50%, 20vh, cover;
+		background-position: bottom, 100% 400px, 50% 6%, bottom;
+		background-size: cover, 50%, 20vh, cover;
 	}
 }
