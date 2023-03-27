@@ -12,5 +12,7 @@ With this calculator we can:</br>
 -square root.</br>
 
 \*If you find bug or you have idea to upgrade design or functions you can message to me or clone repo and push(i will check).
-
+---
+Link : https://calculator-truedie3.netlify.app
+---
 Enjoy! :)
