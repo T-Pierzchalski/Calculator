@@ -15,7 +15,9 @@ body {
 	font-family: Roboto;
 	font-weight: 700;
 	h1 {
-		color: black;
+		color: #fff;
+		text-shadow: 3px 3px black;
+		font-size: 5em;
 	}
 }
 #container {
@@ -102,10 +104,11 @@ body {
 	button {
 		width: 15%;
 		height: 15%;
-		font-size: 1.25em;
+		font-size: 1.5em;
 		background-color: #c1ff72;
-		border: 3px solid white;
+		border: 3px solid #000;
 		color: white;
+		text-shadow: 1px 1px #000;
 		border-radius: 10px;
 		font-family: "Roboto";
 		font-weight: 700;
@@ -122,6 +125,7 @@ body {
 	button.functional {
 		background-color: #f2ff00;
 		color: black;
+		text-shadow: 1px 1px #fff;
 		font-weight: 700;
 	}
 	button.advanced {

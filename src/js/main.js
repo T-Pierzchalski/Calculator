@@ -15,6 +15,9 @@ window.addEventListener("keydown", e => {
 		e.keyCode === 190
 	) {
 		screen.value += e.key;
+		console.log(e.key);
+	} else if (e.keyCode === 110) {
+		screen.value += ".";
 	}
 });
 
@@ -40,6 +43,34 @@ const percentager = document.querySelector(".percentager");
 const squareRooter = document.querySelector(".squareRooter");
 const exponentiator = document.querySelector(".exponentiator");
 
+// key events
+window.addEventListener("keydown", function (e, a) {
+	if (e.keyCode === 107) {
+		plus.classList.add("active");
+		screen.value;
+		a = screen.value;
+		calcNumVariables.a = a;
+		screen.value = "";
+	} else if (e.keyCode === 109) {
+		minus.classList.add("active");
+		screen.value;
+		a = screen.value;
+		calcNumVariables.a = a;
+		screen.value = "";
+	} else if (e.keyCode === 106) {
+		multipler.classList.add("active");
+		screen.value;
+		a = screen.value;
+		calcNumVariables.a = a;
+		screen.value = "";
+	} else if (e.keyCode === 111) {
+		diviser.classList.add("active");
+		screen.value;
+		a = screen.value;
+		calcNumVariables.a = a;
+		screen.value = "";
+	}
+});
 // Calculator functions \\
 function addition() {
 	screen.value = +calcNumVariables.a + +calcNumVariables.b;
@@ -98,6 +129,14 @@ equalButton.addEventListener("click", function (b) {
 	calcNumVariables.b = b;
 	screen.value = "";
 	operate();
+});
+window.addEventListener("keydown", (e, b) => {
+	if (e.keyCode === 13) {
+		screen.value;
+		b = screen.value;
+		calcNumVariables.b = b;
+		operate();
+	}
 });
 
 // Reset calc
