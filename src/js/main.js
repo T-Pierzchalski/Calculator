@@ -15,7 +15,6 @@ window.addEventListener("keydown", e => {
 		e.keyCode === 190
 	) {
 		screen.value += e.key;
-		console.log(e.key);
 	} else if (e.keyCode === 110) {
 		screen.value += ".";
 	}
