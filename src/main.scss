@@ -172,6 +172,15 @@ body {
 		transition: background-color 1s ease-in-out;
 	}
 }
+footer {
+	bottom: 0;
+	position: absolute;
+	font-size: 1.5em;
+	width: 100%;
+	padding: 0.2em 5em;
+	background-color: #000;
+	color: white;
+}
 
 @media screen and (max-width: 576px) {
 	#container {
