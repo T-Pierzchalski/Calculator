@@ -90,7 +90,7 @@ function division() {
 }
 
 function percentage(a, b) {
-	screen.value = (calcNumVariables.a / calcNumVariables.b) * 100 + "%";
+	screen.value = `${(calcNumVariables.a / calcNumVariables.b) * 100}%`;
 }
 
 function squareRoot(a) {
